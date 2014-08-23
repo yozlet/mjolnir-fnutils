@@ -1,0 +1,5 @@
+*.o
+*.so
+*.tgz
+/metadata.json
+/docs.json
