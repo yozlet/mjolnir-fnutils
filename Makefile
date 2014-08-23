@@ -1,7 +1,6 @@
 MODNAME   = core.fnutils
 LUAFILES  = init.lua
 OBJCFILES =
-HEADERS   =
 
 CFLAGS  += -Wall -Wextra
 CFLAGS  += -fobjc-arc
@@ -16,7 +15,7 @@ SOFILES := $(OBJCFILES:m=so)
 
 all: $(MDFILE)
 
-$(SOFILES): $(OFILES) $(HEADERS)
+$(SOFILES): $(OFILES)
 	$(CC) $(OFILES) $(CFLAGS) $(LDFLAGS) -o $@
 
 $(DOCSFILE): $(OBJCFILES) $(LUAFILES) gendocs.rb
